@@ -1,0 +1,123 @@
+================================================================================
+                               V VISHNURAJU
+                        Web, App & Game Developer
+================================================================================
+
+📧 Email: vishnuraju922732@gail.com
+🔗 GitHub: github.com/vvraju56
+💼 LinkedIn: linkedin.com/in/vishnuraju-v-757b9929b
+📍 Location: India
+
+================================================================================
+                           PROFESSIONAL SUMMARY
+================================================================================
+
+Passionate and multi-skilled developer with expertise in web, mobile, and game 
+development. Proficient in modern frameworks like React.js, React Native, and 
+Unity. Experienced in building scalable, performance-driven applications with 
+focus on user experience and clean code architecture. Strong problem-solving 
+skills with a commitment to delivering innovative digital solutions.
+
+================================================================================
+                            TECHNICAL SKILLS
+================================================================================
+
+FRONTEND DEVELOPMENT
+• React.js, JavaScript (ES6+)
+• HTML5, CSS3, Bootstrap
+• Tailwind CSS
+• Responsive Web Design
+
+BACKEND DEVELOPMENT
+• Node.js, Express.js
+• MongoDB, Python
+• RESTful API Development
+• Database Design & Management
+
+MOBILE & GAME DEVELOPMENT
+• React Native
+• Android Studio
+• Unity Game Engine
+• Cross-platform Development
+
+PROGRAMMING LANGUAGES
+• Java, C, C#
+• Python, JavaScript
+• Data Visualization (Power BI, MS Excel)
+
+TOOLS & PLATFORMS
+• Git, VS Code
+• Netlify, Firebase
+• Version Control Systems
+
+================================================================================
+                              KEY PROJECTS
+================================================================================
+
+CROSS-PLATFORM GAME APPLICATION
+Technologies: Unity, React Native, C#
+• Developed interactive mobile game with advanced scoring system and real-time 
+  leaderboard
+• Implemented smooth animations, game physics, and responsive controls
+• Achieved cross-platform compatibility for iOS and Android devices
+
+E-COMMERCE MOBILE APPLICATION
+Technologies: React Native, Firebase, JavaScript
+• Built comprehensive e-commerce solution with user authentication and profile 
+  management
+• Developed shopping cart, product catalog, and secure order processing system
+• Integrated Firebase for real-time database and cloud storage
+
+PERSONAL PORTFOLIO WEBSITE
+Technologies: React.js, Tailwind CSS, JavaScript
+• Designed and developed responsive portfolio showcasing technical skills and 
+  projects
+• Implemented smooth scroll animations, modern UI/UX, and performance optimization
+• Deployed using modern web technologies with SEO best practices
+
+================================================================================
+                               EDUCATION
+================================================================================
+
+BACHELOR OF TECHNOLOGY - INFORMATION TECHNOLOGY
+2022 - 2026
+Nandha Engineering College
+
+HIGHER SECONDARY CERTIFICATE (12th Grade)
+2021 - 2022 | 57.1%
+JKK Nataraja Matric Higher Sec School
+
+SECONDARY SCHOOL CERTIFICATE (10th Grade)
+2019 - 2020 | 57.3%
+JKK Nataraja Matric Higher Sec School
+
+================================================================================
+                            CERTIFICATIONS
+================================================================================
+
+✓ UI UX Certificate
+✓ Data Analysis Training
+✓ Unity Game Development Certificate
+
+================================================================================
+                           CORE COMPETENCIES
+================================================================================
+
+• Full-Stack Web Development        • Cross-Platform Mobile Apps
+• Game Development & Design         • Database Architecture
+• API Development & Integration     • Performance Optimization
+• User Experience Design           • Agile Development Practices
+• Problem Solving & Debugging      • Team Collaboration
+
+================================================================================
+                              ACHIEVEMENTS
+================================================================================
+
+• 25+ Projects Completed
+• AI Knowledge
+• Multitasking
+• 15+ Technologies Mastered
+
+================================================================================
+
+© 2024 V VISHNURAJU | All Rights Reserved

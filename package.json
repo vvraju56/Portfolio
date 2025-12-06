@@ -1,0 +1,21 @@
+{
+  "name": "v-vishnuraju-portfolio",
+  "version": "1.0.0",
+  "description": "Modern developer portfolio website for V VISHNURAJU",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "serve": "python -m http.server 8080"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "web-development",
+    "responsive",
+    "tailwind-css"
+  ],
+  "author": "V VISHNURAJU",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

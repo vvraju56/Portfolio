@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V VISHNURAJU - Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.5in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: white;
+            color: #333;
+            line-height: 1.4;
+            font-size: 11pt;
+        }
+        
+        .resume-container {
+            max-width: 7.5in;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
+        
+        .name {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.85em;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .summary {
+            text-align: justify;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9ff;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .skill-list {
+            list-style: none;
+            font-size: 0.85em;
+        }
+        
+        .skill-list li {
+            padding: 1px 0;
+            color: #555;
+        }
+        
+        .project {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+            page-break-inside: avoid;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #333;
+            font-size: 1em;
+        }
+        
+        .project-tech {
+            color: #667eea;
+            font-weight: 500;
+            margin: 3px 0;
+            font-size: 0.85em;
+        }
+        
+        .project-desc {
+            color: #555;
+            margin-top: 5px;
+            font-size: 0.85em;
+        }
+        
+        .education-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .education-title {
+            font-weight: bold;
+            color: #333;
+            font-size: 0.95em;
+        }
+        
+        .education-details {
+            color: #667eea;
+            font-weight: 500;
+            font-size: 0.85em;
+        }
+        
+        .education-school {
+            color: #666;
+            font-size: 0.85em;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        
+        .cert-bullet {
+            width: 6px;
+            height: 6px;
+            background: #667eea;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            font-size: 0.85em;
+        }
+        
+        .competencies div {
+            color: #555;
+        }
+        
+        @media print {
+            body { 
+                margin: 0;
+                font-size: 10pt;
+            }
+            .resume-container { 
+                max-width: none; 
+                margin: 0;
+                box-shadow: none;
+            }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="profile-section">
+                <img src="me.jpg" alt="V VISHNURAJU" class="profile-img">
+                <div>
+                    <div class="name">V VISHNURAJU</div>
+                    <div class="title">Web, App & Game Developer</div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <span>📧 vishnuraju922732@gail.com</span>
+                <span>🔗 github.com/vvraju56</span>
+                <span>💼 linkedin.com/in/vishnuraju-v-757b9929b</span>
+                <span>📍 India</span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Passionate and multi-skilled developer with expertise in web, mobile, and game development. 
+                Proficient in modern frameworks like React.js, React Native, and Unity. Experienced in building 
+                scalable, performance-driven applications with focus on user experience and clean code architecture. 
+                Strong problem-solving skills with a commitment to delivering innovative digital solutions.
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Frontend Development</h4>
+                    <ul class="skill-list">
+                        <li>• React.js, JavaScript (ES6+)</li>
+                        <li>• HTML5, CSS3, Bootstrap</li>
+                        <li>• Tailwind CSS, Responsive Design</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Backend Development</h4>
+                    <ul class="skill-list">
+                        <li>• Node.js, Express.js</li>
+                        <li>• MongoDB, Python</li>
+                        <li>• RESTful API Development</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Mobile & Game Development</h4>
+                    <ul class="skill-list">
+                        <li>• React Native, Android Studio</li>
+                        <li>• Unity Game Engine, C#</li>
+                        <li>• Cross-platform Development</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Programming & Tools</h4>
+                    <ul class="skill-list">
+                        <li>• Java, C, C#, Python</li>
+                        <li>• Power BI, MS Excel</li>
+                        <li>• Git, VS Code, Netlify</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            
+            <div class="project">
+                <div class="project-title">Cross-Platform Game Application</div>
+                <div class="project-tech">Technologies: Unity, React Native, C#</div>
+                <div class="project-desc">
+                    • Developed interactive mobile game with advanced scoring system and real-time leaderboard<br>
+                    • Implemented smooth animations, game physics, and responsive controls<br>
+                    • Achieved cross-platform compatibility for iOS and Android devices
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">E-Commerce Mobile Application</div>
+                <div class="project-tech">Technologies: React Native, Firebase, JavaScript</div>
+                <div class="project-desc">
+                    • Built comprehensive e-commerce solution with user authentication and profile management<br>
+                    • Developed shopping cart, product catalog, and secure order processing system<br>
+                    • Integrated Firebase for real-time database and cloud storage
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">Personal Portfolio Website</div>
+                <div class="project-tech">Technologies: React.js, Tailwind CSS, JavaScript</div>
+                <div class="project-desc">
+                    • Designed and developed responsive portfolio showcasing technical skills and projects<br>
+                    • Implemented smooth scroll animations, modern UI/UX, and performance optimization<br>
+                    • Deployed using modern web technologies with SEO best practices
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            
+            <div class="education-item">
+                <div class="education-title">Bachelor of Technology - Information Technology</div>
+                <div class="education-details">2022 - 2026</div>
+                <div class="education-school">Nandha Engineering College</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-title">Higher Secondary Certificate (12th Grade)</div>
+                <div class="education-details">2021 - 2022 | 57.1%</div>
+                <div class="education-school">JKK Nataraja Matric Higher Sec School</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-title">Secondary School Certificate (10th Grade)</div>
+                <div class="education-details">2019 - 2020 | 57.3%</div>
+                <div class="education-school">JKK Nataraja Matric Higher Sec School</div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="cert-item">
+                <div class="cert-bullet"></div>
+                <span>UI UX Certificate</span>
+            </div>
+            <div class="cert-item">
+                <div class="cert-bullet"></div>
+                <span>Data Analysis Training</span>
+            </div>
+            <div class="cert-item">
+                <div class="cert-bullet"></div>
+                <span>Unity Game Development Certificate</span>
+            </div>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="competencies">
+                <div>• Full-Stack Web Development</div>
+                <div>• Cross-Platform Mobile Apps</div>
+                <div>• Game Development & Design</div>
+                <div>• Database Architecture</div>
+                <div>• API Development & Integration</div>
+                <div>• Performance Optimization</div>
+                <div>• User Experience Design</div>
+                <div>• Problem Solving & Debugging</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-print when page loads for PDF generation
+        window.onload = function() {
+            setTimeout(function() {
+                window.print();
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

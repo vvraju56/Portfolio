@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V VISHNURAJU - Web, App & Game Developer</title>
+    <meta name="description" content="Portfolio of V VISHNURAJU - A passionate developer focused on building creative digital experiences using cutting-edge technologies.">
+    <meta name="author" content="V VISHNURAJU">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="V VISHNURAJU - Web, App & Game Developer">
+    <meta property="og:description" content="A passionate developer focused on building creative digital experiences using cutting-edge technologies.">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 navbar-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold gradient-text">V VISHNURAJU</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Skills</a>
+                        <a href="#projects" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Projects</a>
+                        <a href="#education" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Education</a>
+                        <a href="#contact" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-purple-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">Projects</a>
+                <a href="#education" class="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">Education</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center gradient-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left" data-aos="fade-right">
+                        <h2 class="text-2xl md:text-3xl font-light text-white mb-4">Hello, I'm</h2>
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">V VISHNURAJU</h1>
+                        <h3 class="text-xl md:text-2xl font-medium text-purple-200 mb-6">Web, App & Game Developer</h3>
+                        <p class="text-lg text-purple-100 mb-8 max-w-2xl">
+                            A passionate developer focused on building creative digital experiences using cutting-edge technologies.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <button onclick="downloadResume()" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                <i class="fas fa-download mr-2"></i>Download Resume
+                            </button>
+                            <button onclick="scrollToContact()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                                <i class="fas fa-envelope mr-2"></i>Contact Me
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center lg:justify-end" data-aos="fade-left">
+                        <div class="relative">
+                            <div class="w-80 h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl hero-animation">
+                                <img src="me.jpg" alt="V VISHNURAJU" class="w-full h-full object-cover">
+                            </div>
+                            <div class="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <i class="fas fa-code text-2xl text-gray-800"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                    <h3 class="text-xl text-purple-600 font-medium">Professional Summary</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                            I'm a passionate and multi-skilled developer focused on web, mobile, and game development. 
+                            I use modern tools and frameworks like React.js, React Native, Android Studio, and Unity to 
+                            build scalable, performance-driven applications. I enjoy solving real-world problems and 
+                            delivering intuitive digital experiences.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-purple-600 rounded-full mr-4"></div>
+                                <span class="text-gray-700 font-medium">Full-Stack & Cross-Platform Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-purple-600 rounded-full mr-4"></div>
+                                <span class="text-gray-700 font-medium">Game & Mobile App Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-purple-600 rounded-full mr-4"></div>
+                                <span class="text-gray-700 font-medium">Passionate About Scalable Code & UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">25+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">AI</div>
+                            <div class="text-gray-600">Knowledge</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">Multi</div>
+                            <div class="text-gray-600">Tasking</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">15+</div>
+                            <div class="text-gray-600">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                    <p class="text-xl text-gray-600">Technologies and tools I work with</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Frontend Development -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-laptop-code text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Frontend Development</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="skill-chip bg-blue-50 text-blue-700 px-4 py-2 rounded-lg text-center font-medium">React.js</div>
+                            <div class="skill-chip bg-yellow-50 text-yellow-700 px-4 py-2 rounded-lg text-center font-medium">JavaScript</div>
+                            <div class="skill-chip bg-orange-50 text-orange-700 px-4 py-2 rounded-lg text-center font-medium">HTML5</div>
+                            <div class="skill-chip bg-blue-50 text-blue-700 px-4 py-2 rounded-lg text-center font-medium">CSS3</div>
+                            <div class="skill-chip bg-purple-50 text-purple-700 px-4 py-2 rounded-lg text-center font-medium">Bootstrap</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Development -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-server text-2xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Backend Development</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="skill-chip bg-green-50 text-green-700 px-4 py-2 rounded-lg text-center font-medium">Node.js</div>
+                            <div class="skill-chip bg-gray-50 text-gray-700 px-4 py-2 rounded-lg text-center font-medium">Express.js</div>
+                            <div class="skill-chip bg-green-50 text-green-700 px-4 py-2 rounded-lg text-center font-medium">MongoDB</div>
+                            <div class="skill-chip bg-blue-50 text-blue-700 px-4 py-2 rounded-lg text-center font-medium">Python</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Data Visualization -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chart-bar text-2xl text-yellow-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Data Visualization</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="skill-chip bg-yellow-50 text-yellow-700 px-4 py-2 rounded-lg text-center font-medium">Power BI</div>
+                            <div class="skill-chip bg-green-50 text-green-700 px-4 py-2 rounded-lg text-center font-medium">MS Excel</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Programming Languages -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code text-2xl text-red-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Programming Languages</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="skill-chip bg-red-50 text-red-700 px-4 py-2 rounded-lg text-center font-medium">Java</div>
+                            <div class="skill-chip bg-blue-50 text-blue-700 px-4 py-2 rounded-lg text-center font-medium">C</div>
+                            <div class="skill-chip bg-purple-50 text-purple-700 px-4 py-2 rounded-lg text-center font-medium">C#</div>
+                            <div class="skill-chip bg-green-50 text-green-700 px-4 py-2 rounded-lg text-center font-medium">Python</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Platforms -->
+                <div class="mt-12" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">Tools & Platforms</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="skill-chip bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-medium">Git</div>
+                        <div class="skill-chip bg-blue-100 text-blue-700 px-6 py-3 rounded-full font-medium">Blender</div>
+                        <div class="skill-chip bg-teal-100 text-teal-700 px-6 py-3 rounded-full font-medium">Unity</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
+                    <p class="text-xl text-gray-600">Some of my recent work</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-blue-500 flex items-center justify-center">
+                            <i class="fas fa-gamepad text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Cross-Platform Game App</h3>
+                            <p class="text-gray-600 mb-4">
+                                Built using Unity and React Native with game logic, animation, scoring system, and leaderboard functionality.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Unity</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">React Native</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">E-Commerce Mobile App</h3>
+                            <p class="text-gray-600 mb-4">
+                                Developed using React Native and Firebase with cart, authentication, product list, and order management.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">React Native</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">Firebase</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-48 bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center">
+                            <i class="fas fa-user text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Personal Portfolio Website</h3>
+                            <p class="text-gray-600 mb-4">
+                                Built using React.js and Tailwind CSS with responsive design, smooth scroll, and animations.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">React.js</span>
+                                <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/vvraju56" class="text-purple-600 hover:text-purple-800 font-medium">
+                                    <i class="fab fa-github mr-2"></i>GitHub
+                                </a>
+                                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Education & Certifications</h2>
+                    <p class="text-xl text-gray-600">My academic background and achievements</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Education -->
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                            <i class="fas fa-graduation-cap text-purple-600 mr-3"></i>Education
+                        </h3>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <div class="flex items-start">
+                                <div class="w-4 h-4 bg-purple-600 rounded-full mt-2 mr-4"></div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-2">B.Tech in Information Technology</h4>
+                                    <p class="text-purple-600 font-medium mb-2">2022 – 2026</p>
+                                    <p class="text-gray-600">Nandha Engineering College</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications -->
+                    <div data-aos="fade-left">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                            <i class="fas fa-certificate text-purple-600 mr-3"></i>Certifications
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
+                                <div class="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
+                                <span class="text-gray-700 font-medium">UI UX Certificate</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
+                                <div class="w-3 h-3 bg-green-600 rounded-full mr-4"></div>
+                                <span class="text-gray-700 font-medium">Data Analysis Training</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-lg flex items-center">
+                                <div class="w-3 h-3 bg-purple-600 rounded-full mr-4"></div>
+                                <span class="text-gray-700 font-medium">Unity Game Development Certificate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
+                    <p class="text-xl text-gray-600">Let's work together</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Get In Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">Email</p>
+                                    <a href="mailto:vishnuraju922732@gail.com" class="text-gray-900 font-medium hover:text-purple-600">
+                                        vishnuraju922732@gail.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fab fa-github text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">GitHub</p>
+                                    <a href="https://github.com/vvraju56" class="text-gray-900 font-medium hover:text-purple-600">
+                                        github.com/vvraju56
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/vishnuraju-v-757b9929b" class="text-gray-900 font-medium hover:text-purple-600">
+                                        linkedin.com/in/vishnuraju-v-757b9929b
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600 text-sm">Location</p>
+                                    <p class="text-gray-900 font-medium">India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div data-aos="fade-left">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Send Message</h3>
+                        <form id="contact-form" class="space-y-6" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html">
+                            <!-- Hidden honeypot field for spam protection -->
+                            <div style="display: none;">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </div>
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full btn-primary text-white px-8 py-3 rounded-lg font-semibold">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 V VISHNURAJU | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
