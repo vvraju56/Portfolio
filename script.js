@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Setup navbar scroll effect
     setupNavbarScroll();
+    
+    // Enforce dark theme and initialize magnetic buttons
+    document.documentElement.setAttribute('data-theme', 'dark');
+    initMagneticButtons();
 });
 
 // Utility functions
@@ -211,6 +215,26 @@ function setupContactForm() {
     });
 }
 
+/* Dark theme enforced by default (no toggle) */
+
+/* Magnetic button pointer tracking */
+function initMagneticButtons(){
+    const buttons = document.querySelectorAll('.btn-magnetic');
+    buttons.forEach(btn => {
+        btn.addEventListener('pointermove', function(e){
+            const rect = btn.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            btn.style.setProperty('--x', x + '%');
+            btn.style.setProperty('--y', y + '%');
+        });
+        btn.addEventListener('pointerleave', function(){
+            btn.style.setProperty('--x', '50%');
+            btn.style.setProperty('--y', '50%');
+        });
+    });
+}
+
 // Setup navbar scroll effect
 function setupNavbarScroll() {
     const navbar = document.querySelector('nav');
@@ -251,6 +275,80 @@ document.addEventListener('DOMContentLoaded', function() {
         
         chip.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
+
+        /* ===============================
+             PARALLAX JS (append)
+             - Scroll-based parallax for elements with `.parallax` and `data-speed`
+             - Mouse tilt for `.project-card` (light, GPU-accelerated)
+             - Decorative drift initialization for `.drift`
+             - Respects `prefers-reduced-motion` and disables on small screens
+        =================================== */
+
+        (function(){
+            // feature / accessibility checks
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isSmall = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
+            if (prefersReduced) return; // no motion
+
+            // SCROLL PARALLAX
+            const parallaxEls = Array.from(document.querySelectorAll('.parallax'));
+            const handleScroll = () => {
+                const scrollY = window.scrollY || window.pageYOffset;
+                parallaxEls.forEach(el => {
+                    const speed = parseFloat(el.dataset.speed) || 0.12;
+                    // reduce effect on small screens
+                    const s = isSmall ? (speed * 0.25) : speed;
+                    el.style.transform = `translate3d(0, ${scrollY * s}px, 0)`;
+                });
+            };
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+
+            // HERO subtle background parallax (separate faster handler for fine control)
+            const hero = document.querySelector('#home.hero-parallax') || document.querySelector('#home');
+            if (hero && !isSmall) {
+                const heroSpeed = 0.06;
+                const heroHandler = () => {
+                    const base = window.scrollY || window.pageYOffset;
+                    const y = base * heroSpeed;
+                    hero.style.transform = `translate3d(0, ${y}px, 0)`;
+                };
+                window.addEventListener('scroll', heroHandler, { passive: true });
+            }
+
+            // MOUSE TILT FOR PROJECT CARDS
+            if (!isSmall) {
+                const cards = document.querySelectorAll('.project-card');
+                cards.forEach(card => {
+                    let rect = null;
+                    const strength = 18; // lower = more subtle
+
+                    const onMove = (e) => {
+                        if (!rect) rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const midX = rect.width / 2;
+                        const midY = rect.height / 2;
+                        const rotateY = (x - midX) / strength;
+                        const rotateX = -(y - midY) / strength;
+                        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+                    };
+                    const onLeave = () => { card.style.transform = ''; rect = null; };
+                    card.addEventListener('mousemove', onMove);
+                    card.addEventListener('mouseleave', onLeave);
+                });
+            }
+
+            // Decorative drift: randomize slight phase to avoid uniform motion
+            const drifts = document.querySelectorAll('.drift');
+            drifts.forEach((el, i) => {
+                const delay = (i % 5) * 0.7;
+                el.style.animationDelay = `${delay}s`;
+            });
+
+        })();
+
         });
     });
     
