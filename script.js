@@ -349,6 +349,143 @@ document.addEventListener('DOMContentLoaded', function() {
 
         })();
 
+        /* ===============================
+             CURSOR GLOW FOLLOW
+        ================================*/
+
+        (function () {
+            const glow = document.getElementById("cursor-glow");
+            if (!glow) return;
+
+            let targetX = window.innerWidth / 2;
+            let targetY = window.innerHeight / 2;
+            let currentX = targetX;
+            let currentY = targetY;
+            let rafId;
+
+            const prefersReduced =
+                window.matchMedia &&
+                window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            if (prefersReduced) {
+                glow.style.display = "none";
+                return;
+            }
+
+            const onMove = (e) => {
+                targetX = e.clientX;
+                targetY = e.clientY;
+                if (!rafId) {
+                    rafId = requestAnimationFrame(updateGlow);
+                }
+            };
+
+            function updateGlow() {
+                const lerp = 0.18;
+                currentX += (targetX - currentX) * lerp;
+                currentY += (targetY - currentY) * lerp;
+
+                glow.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+
+                if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
+                    rafId = requestAnimationFrame(updateGlow);
+                } else {
+                    rafId = null;
+                }
+            }
+
+            window.addEventListener("mousemove", onMove);
+        })();
+
+        /* ===============================
+             PAGE TRANSITION ON NAV LINKS
+        ================================*/
+
+        (function () {
+            const overlay = document.getElementById("page-transition");
+            if (!overlay) return;
+
+            const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+            const prefersReduced =
+                window.matchMedia &&
+                window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            internalLinks.forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    const href = link.getAttribute("href");
+                    const id = href && href.startsWith("#") ? href.substring(1) : null;
+                    const target = id ? document.getElementById(id) : null;
+
+                    if (!target) return;
+
+                    e.preventDefault();
+
+                    if (prefersReduced) {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                        return;
+                    }
+
+                    overlay.classList.add("page-transition--active");
+
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 200);
+
+                    setTimeout(() => {
+                        overlay.classList.remove("page-transition--active");
+                    }, 750);
+                });
+            });
+
+            // Initial subtle entrance
+            window.addEventListener("load", () => {
+                overlay.classList.add("page-transition--active");
+                setTimeout(() => overlay.classList.remove("page-transition--active"), 700);
+            });
+        })();
+
+
+        /* ===============================
+                    PARALLAX + 3D TILT (append)
+        ================================*/
+
+        // scroll parallax for elements with .parallax
+        (function(){
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const items = document.querySelectorAll('.parallax');
+            const onScroll = () => {
+                const scrollY = window.scrollY || window.pageYOffset;
+                items.forEach(el => {
+                    const speed = parseFloat(el.dataset.speed) || 0.08;
+                    el.style.transform = `translate3d(0, ${scrollY * speed}px, 0)`;
+                });
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            // 3D tilt for project cards
+            if (!window.matchMedia || !window.matchMedia('(max-width: 768px)').matches) {
+                document.querySelectorAll('.project-card').forEach(card => {
+                    card.addEventListener('mousemove', e => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const midX = rect.width / 2;
+                        const midY = rect.height / 2;
+                        const rotateX = -(y - midY) / 18;
+                        const rotateY = (x - midX) / 18;
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+                    });
+                });
+            }
+
+        })();
+
+
         });
     });
     

@@ -8,13 +8,23 @@
   --accent-2: #4be1e6;
   --accent-3: #8f5bff;
   --neon: #9b8bff;
-  --muted: rgba(230,238,248,0.92);
+  --muted: rgba(255,255,255,0.95);
 }
 
 /* Base */
 *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
 html{scroll-behavior:smooth}
-body{background:var(--bg-1);color:var(--muted);line-height:1.45;min-height:100vh}
+body{background:var(--bg-1);color:var(--muted);line-height:1.45;min-height:100vh;font-weight:500}
+
+/* Typography: stronger, brighter text */
+h1,h2,h3,h4,h5,h6{color:#ffffff;font-weight:800;letter-spacing:0.2px}
+/* brighten common utility text classes to override Tailwind grays */
+.text-gray-900, .text-gray-800 { color: #ffffff !important; font-weight:700 }
+.text-gray-700, .text-gray-600 { color: rgba(255,255,255,0.95) !important; font-weight:600 }
+.text-gray-500, .text-gray-400 { color: rgba(255,255,255,0.85) !important }
+
+/* subtle extra glow for headings */
+h1,h2{ text-shadow: 0 6px 18px rgba(124,92,255,0.06); }
 
 /* Hero gradient background utility (keeps existing usage) */
 .gradient-bg{background:linear-gradient(135deg,var(--accent-1),var(--accent-3) 70%)}
@@ -81,3 +91,31 @@ footer{background:linear-gradient(180deg,rgba(2,6,23,0.9),rgba(1,4,14,0.95));col
 /* small utility for subtle glow on hero text when needed */
 .hero-glow{position:relative}
 .hero-glow::after{content:"";position:absolute;inset:-40%;background:radial-gradient(closest-side, rgba(124,92,255,0.08), transparent 35%);filter:blur(18px);z-index:-1;opacity:.9;pointer-events:none}
+
+/* Force all common Tailwind background utilities to the site's black theme
+   This keeps structure intact while making panels and section backgrounds black */
+.bg-white,
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200,
+.bg-blue-50,
+.bg-green-50,
+.bg-yellow-50,
+.bg-red-50,
+.bg-purple-50,
+.bg-gray-800,
+.bg-gray-900 {
+  background-color: var(--bg-1) !important;
+  background-image: none !important;
+  color: var(--muted) !important;
+  border-color: rgba(255,255,255,0.04) !important;
+}
+
+/* Mobile menu/backgrounds */
+#mobile-menu, .mobile-menu, .menu-panel { background-color: var(--bg-1) !important; border-top: 1px solid rgba(255,255,255,0.04) !important }
+
+/* Ensure section panels that used white or light backgrounds look correct */
+.rounded-lg.bg-white, .p-6.bg-gray-50 { background-color: rgba(255,255,255,0.02) !important; border:1px solid rgba(255,255,255,0.03) !important }
+
+/* Inputs fallback to darker background if any utility set them light */
+input.bg-white, textarea.bg-white, select.bg-white { background-color: rgba(255,255,255,0.03) !important; color: #fff !important }

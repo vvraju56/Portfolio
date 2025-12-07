@@ -143,3 +143,239 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
 }
+
+/* ========================
+    DARK NEON GLOBAL THEME
+======================== */
+
+body {
+    background: #060606;
+    color: #e9e9e9;
+    scroll-behavior: smooth;
+}
+
+/* Neon gradients */
+.gradient-text {
+    background: linear-gradient(135deg, #9b5cff, #34fff6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+    background:
+        radial-gradient(circle at 20% 25%, rgba(155,92,255,.25), transparent 30%),
+        radial-gradient(circle at 80% 40%, rgba(52,255,246,.18), transparent 35%),
+        linear-gradient(180deg,#030303,#070707);
+}
+
+/* Navbar */
+.navbar-blur{
+    background: rgba(5,5,5,0.65);
+    backdrop-filter: blur(14px);
+}
+
+/* Glass cards */
+.project-card,
+.bg-white,
+.skill-chip {
+    background: rgba(20,20,20,.65)!important;
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(18px);
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.45);
+}
+
+/* Hero avatar glow + float */
+.hero-animation{
+    box-shadow:
+        0 0 40px rgba(155,92,255,.45),
+        0 0 80px rgba(52,255,246,.15);
+    animation:
+        float 6s ease-in-out infinite,
+        glowPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse{
+    from{ filter: drop-shadow(0 0 8px #9b5cff);} 
+    to{ filter: drop-shadow(0 0 16px #34fff6);} 
+}
+
+@keyframes float{
+  0%,100%{ transform: translateY(0);} 
+  50%{ transform: translateY(-15px);} 
+}
+
+/* Headings glow */
+h1, h2 {
+    text-shadow: 0 0 14px rgba(155,92,255,.35);
+}
+
+/* Neon Buttons */
+.btn-primary {
+    background: linear-gradient(135deg,#9b5cff,#34fff6);
+    box-shadow: 0 0 18px rgba(155,92,255,.65);
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    box-shadow:0 0 38px rgba(155,92,255,.85);
+}
+
+/* Hover lift */
+.project-card{
+    transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 30px 70px rgba(52,255,246,.25);
+}
+
+/* Links */
+a{
+    color:#9b5cff;
+}
+
+a:hover{
+    color:#34fff6;
+}
+
+/* Contact Form fields */
+input, textarea{
+    background:rgba(15,15,15,.8)!important;
+    color:#fff!important;
+    border:1px solid rgba(255,255,255,.12)!important;
+}
+
+/* Parallax */
+.parallax{
+    will-change: transform;
+}
+
+/* Reduced motion safety */
+@media(prefers-reduced-motion: reduce){
+    *{
+        animation:none!important;
+        transition:none!important;
+    }
+}
+
+/* ===============================
+     CURSOR GLOW TRAIL
+================================*/
+
+.cursor-glow {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 9999px;
+    background: radial-gradient(circle,
+        rgba(155, 92, 255, 0.7),
+        rgba(52, 255, 246, 0.0) 60%);
+    mix-blend-mode: screen;
+    filter: blur(10px);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0.35;
+    transition: opacity 0.3s ease-out;
+    z-index: 40;
+}
+
+body:hover .cursor-glow {
+    opacity: 0.5;
+}
+
+/* ===============================
+     BACKGROUND BLOBS
+================================*/
+
+.fx-bg-blobs {
+    z-index: -1;
+}
+
+.blob {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 9999px;
+    filter: blur(40px);
+    opacity: 0.4;
+    mix-blend-mode: screen;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(155, 92, 255, 0.9),
+            rgba(3, 3, 3, 0.0) 70%);
+    animation: blobFloat 26s ease-in-out infinite alternate;
+}
+
+.blob-1 {
+    top: -120px;
+    left: -80px;
+}
+
+.blob-2 {
+    bottom: -160px;
+    right: -120px;
+    background: radial-gradient(circle at 70% 30%,
+            rgba(52, 255, 246, 0.8),
+            rgba(3, 3, 3, 0.0) 70%);
+    animation-duration: 32s;
+}
+
+.blob-3 {
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    height: 520px;
+    opacity: 0.25;
+    animation-duration: 38s;
+}
+
+@keyframes blobFloat {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(40px, -30px, 0) scale(1.05);
+    }
+    100% {
+        transform: translate3d(-40px, 20px, 0) scale(1.03);
+    }
+}
+
+/* ===============================
+     PAGE TRANSITION OVERLAY
+================================*/
+
+.page-transition {
+    background:
+        radial-gradient(circle at 10% 0%, rgba(155, 92, 255, 0.3), transparent 60%),
+        radial-gradient(circle at 90% 100%, rgba(52, 255, 246, 0.25), transparent 55%),
+        #020204;
+    opacity: 0;
+    transform: scale(1.05);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+    z-index: 50;
+}
+
+.page-transition--active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===============================
+     REDUCED MOTION SAFETY
+================================*/
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor-glow {
+        display: none !important;
+    }
+    .blob {
+        animation: none !important;
+    }
+}
+
