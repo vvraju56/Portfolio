@@ -16,6 +16,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 import { Toast } from './toast.js';
 import { playAdminNotificationSound } from './notifications.js';
+import { registerAdminDevice, initFCM } from './fcm-integration.js';
 
 let currentUser = null;
 let unsubscribe = null;
@@ -47,6 +48,10 @@ function showDashboard() {
   document.getElementById('login-section').style.display = 'none';
   document.getElementById('dashboard-section').style.display = 'block';
   document.getElementById('admin-email').textContent = currentUser.email;
+  
+  // Initialize FCM for this admin
+  initFCM();
+  registerAdminDevice(currentUser.uid);
 }
 
 function hideDashboard() {

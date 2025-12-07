@@ -70,7 +70,7 @@ In Firebase Console:
 
 Now you can log into /admin.html with these credentials!
 
-5️⃣  OPTIONAL: TELEGRAM NOTIFICATIONS
+6️⃣  OPTIONAL: TELEGRAM NOTIFICATIONS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 To enable Telegram alerts when forms are submitted:
@@ -95,7 +95,56 @@ Step 3: Update notifications.js
   5. Replace with: const TELEGRAM_CHAT_ID = 'YOUR_ACTUAL_CHAT_ID';
   6. Save file
 
-6️⃣  OPTIONAL: EMAIL NOTIFICATIONS (EmailJS)
+6️⃣  OPTIONAL: TELEGRAM NOTIFICATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To enable Telegram alerts when forms are submitted:
+
+Step 1: Create Telegram Bot
+  1. Open Telegram, search for @BotFather
+  2. Send: /newbot
+  3. Follow prompts to create bot
+  4. Copy your BOT_TOKEN
+
+Step 2: Get Your Chat ID
+  1. Send /start to your new bot
+  2. Search for @getidsbot, send /start
+  3. Forward a message from your bot to @getidsbot
+  4. Copy your CHAT_ID
+
+Step 3: Update notifications.js
+  1. Open notifications.js
+  2. Find: const TELEGRAM_BOT_TOKEN = 'your_bot_token';
+  3. Replace with: const TELEGRAM_BOT_TOKEN = 'YOUR_ACTUAL_BOT_TOKEN';
+  4. Find: const TELEGRAM_CHAT_ID = 'your_chat_id';
+  5. Replace with: const TELEGRAM_CHAT_ID = 'YOUR_ACTUAL_CHAT_ID';
+  6. Save file
+
+7️⃣  FIREBASE CLOUD MESSAGING (FCM) - PUSH NOTIFICATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 ALREADY CONFIGURED WITH YOUR SERVER KEY!
+
+FCM is fully integrated for real-time push notifications on multiple devices:
+
+✅ Service Worker: firebase-messaging-sw.js (auto-registers)
+✅ FCM Integration: fcm-integration.js (handles notifications)
+✅ Admin Registration: Auto-registers on admin dashboard login
+✅ Server Key: Already embedded in fcm-integration.js
+
+How it works:
+  1. User submits form → FCM notification sent to all admin devices
+  2. Admin sees desktop/mobile push notification
+  3. Admin can click notification to jump to dashboard
+  4. Notifications work even when browser is closed
+
+To enable FCM in fcm-integration.js:
+  1. Uncomment line: initFCM(); (around line 96)
+  2. Reload admin.html
+  3. Accept notification permission when prompted
+  4. You will now receive push notifications on new submissions!
+
+8️⃣  OPTIONAL: EMAIL NOTIFICATIONS (EmailJS)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 To enable email alerts:
@@ -108,7 +157,20 @@ Step 4: Update notifications.js:
   - EMAILJS_TEMPLATE_ID
   - EMAILJS_PUBLIC_KEY
 
-7️⃣  ADD index.html TO PORTFOLIO ROOT
+8️⃣  OPTIONAL: EMAIL NOTIFICATIONS (EmailJS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To enable email alerts:
+
+Step 1: Sign up at https://www.emailjs.com/
+Step 2: Create email service (Gmail recommended)
+Step 3: Create email template
+Step 4: Update notifications.js:
+  - EMAILJS_SERVICE_ID
+  - EMAILJS_TEMPLATE_ID
+  - EMAILJS_PUBLIC_KEY
+
+9️⃣  ADD index.html TO PORTFOLIO ROOT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ Already done! Your updated index.html now includes:
@@ -117,7 +179,17 @@ Step 4: Update notifications.js:
   - Form submission module link
   - Contact form has id="contact-form" for auto-detection
 
-8️⃣  TEST THE SYSTEM
+9️⃣  ADD index.html TO PORTFOLIO ROOT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Already done! Your updated index.html now includes:
+  - Firebase SDK imports
+  - Toast notification CSS
+  - Form submission module link
+  - Contact form has id="contact-form" for auto-detection
+  - FCM initialization module
+
+🔟  TEST THE SYSTEM
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. Open your portfolio homepage
@@ -147,6 +219,7 @@ Step 4: Update notifications.js:
 ✅ Notification sound on admin dashboard
 ✅ Telegram bot notifications (if configured)
 ✅ Email notifications (if configured)
+✅ Firebase Cloud Messaging (FCM) push notifications
 ✅ Fully responsive design
 ✅ Production-ready security rules
 

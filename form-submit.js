@@ -3,6 +3,7 @@ import { db } from './firebase-config.js';
 import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 import { Toast } from './toast.js';
 import { notifyAdmins } from './notifications.js';
+import { sendFCMNotification } from './fcm-integration.js';
 
 export async function initContactForm() {
   const contactForm = document.getElementById('contact-form');
@@ -51,6 +52,14 @@ export async function initContactForm() {
       
       // Notify admins
       await notifyAdmins({
+        name,
+        email,
+        message,
+        docId: docRef.id
+      });
+      
+      // Send FCM push notification
+      await sendFCMNotification({
         name,
         email,
         message,
