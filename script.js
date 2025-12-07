@@ -65,7 +65,7 @@ function downloadResume() {
 
 function downloadPDF() {
     // Open PDF-optimized version in new window for printing/saving
-    const pdfWindow = window.open('vvrajuResume.pdf');
+    const pdfWindow = window.open('V_VISHNURAJU_Resume.html');
     closeDownloadModal();
 }
 

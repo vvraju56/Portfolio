@@ -3,13 +3,13 @@ import { db } from './firebase-config.js';
 import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
 // EmailJS Configuration (you need to sign up at emailjs.com)
-const EMAILJS_SERVICE_ID = 'service_your_service_id';
-const EMAILJS_TEMPLATE_ID = 'template_your_template_id';
-const EMAILJS_PUBLIC_KEY = 'your_public_key';
+const EMAILJS_SERVICE_ID = 'service_vvraju056';
+const EMAILJS_TEMPLATE_ID = 'template_cnw2ph5';
+const EMAILJS_PUBLIC_KEY = 'XonO9SnyTOYnpOAPi';
 
 // Telegram Bot Configuration
-const TELEGRAM_BOT_TOKEN = 'your_bot_token';
-const TELEGRAM_CHAT_ID = 'your_chat_id';
+const TELEGRAM_BOT_TOKEN = '7967601900:AAEFJvPkYeGF6cslWos9pUaG0B7YUmc0ot0';
+const TELEGRAM_CHAT_ID = '1673557365';
 
 export async function notifyAdmins(submission) {
   try {
