@@ -727,24 +727,58 @@
     <title>V VISHNURAJU - Web, App & Game Developer</title>
     <meta name="description" content="Portfolio of V VISHNURAJU - A passionate developer focused on building creative digital experiences using cutting-edge technologies.">
     <meta name="author" content="V VISHNURAJU">
-    
-    <!-- Open Graph Meta Tags -->
+    <meta name="theme-color" content="#8B5CF6">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph (for social sharing) -->
     <meta property="og:title" content="V VISHNURAJU - Web, App & Game Developer">
     <meta property="og:description" content="A passionate developer focused on building creative digital experiences using cutting-edge technologies.">
     <meta property="og:type" content="website">
-    
+    <meta property="og:url" content="https://vvraju.netlify.app">
+    <meta property="og:image" content="https://vvraju.netlify.app/android-chrome-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="V VISHNURAJU - Web, App & Game Developer">
+    <meta name="twitter:description" content="A passionate developer focused on building creative digital experiences using cutting-edge technologies.">
+    <meta name="twitter:image" content="https://vvraju.netlify.app/android-chrome-512x512.png">
+
+    <!-- Google Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "V VISHNURAJU",
+      "jobTitle": "Web, App & Game Developer",
+      "image": "https://vvraju.netlify.app/android-chrome-512x512.png",
+      "url": "https://vvraju.netlify.app",
+      "sameAs": [
+        "https://github.com/vvraju56",
+        "https://www.linkedin.com/in/vishnuraju-v-757b9929b"
+      ]
+    }
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles.futuristic.css">
@@ -761,7 +795,7 @@
             gap: 10px;
             pointer-events: none;
         }
-        
+
         .toast {
             background: white;
             padding: 16px 24px;
@@ -773,35 +807,35 @@
             animation: slideIn 0.3s ease-out;
             pointer-events: auto;
         }
-        
+
         .toast-content {
             display: flex;
             align-items: center;
             gap: 12px;
             width: 100%;
         }
-        
+
         .toast-success { border-left: 4px solid #10b981; }
         .toast-error { border-left: 4px solid #ef4444; }
         .toast-warning { border-left: 4px solid #f59e0b; }
         .toast-info { border-left: 4px solid #3b82f6; }
-        
+
         .toast-icon {
             font-weight: bold;
             font-size: 18px;
         }
-        
+
         .toast-success .toast-icon { color: #10b981; }
         .toast-error .toast-icon { color: #ef4444; }
         .toast-warning .toast-icon { color: #f59e0b; }
         .toast-info .toast-icon { color: #3b82f6; }
-        
+
         .toast-message {
             flex: 1;
             color: #1f2937;
             font-size: 14px;
         }
-        
+
         .toast-close {
             background: none;
             border: none;
@@ -812,11 +846,11 @@
             width: 24px;
             height: 24px;
         }
-        
+
         .toast-close:hover {
             color: #1f2937;
         }
-        
+
         @keyframes slideIn {
             from {
                 transform: translateX(400px);
