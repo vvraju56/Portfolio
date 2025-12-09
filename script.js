@@ -115,7 +115,7 @@ body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
 
 <div class="header">
     <div class="name">V VISHNURAJU</div>
-    <div class="title">Web, App & Game Developer</div>
+    <div class="title">Full-Stack Developer</div>
     <div class="contact">
         📧 vishnuraju922732@gail.com | 🔗 github.com/vvraju56 | 💼 linkedin.com/in/vishnuraju-v-757b9929b | 📍 India
     </div>
