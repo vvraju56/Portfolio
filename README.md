@@ -73,4 +73,4 @@ This portfolio can be easily deployed to:
 
 ## License
 
-© 2024 V VISHNURAJU | All Rights Reserved
+© 2026 V VISHNURAJU | All Rights Reserved

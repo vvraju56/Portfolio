@@ -37,50 +37,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Utility functions
 function downloadResume() {
-    // Create a dropdown menu for download options
-    const downloadOptions = document.createElement('div');
-    downloadOptions.innerHTML = `
-        <div id="download-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full mx-4">
-                <h3 class="text-lg font-bold text-gray-900 mb-4">Download Resume</h3>
-                <div class="space-y-3">
-                    <button onclick="downloadPDF()" class="w-full bg-red-500 text-white px-4 py-3 rounded-lg hover:bg-red-600 transition-colors">
-                        <i class="fas fa-file-pdf mr-2"></i>Download as PDF
-                    </button>
-                    <button onclick="downloadWord()" class="w-full bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition-colors">
-                        <i class="fas fa-file-word mr-2"></i>Download as Word
-                    </button>
-                    <button onclick="viewOnline()" class="w-full bg-gray-500 text-white px-4 py-3 rounded-lg hover:bg-gray-600 transition-colors">
-                        <i class="fas fa-eye mr-2"></i>View Online
-                    </button>
-                </div>
-                <button onclick="closeDownloadModal()" class="mt-4 w-full text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times mr-2"></i>Cancel
-                </button>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(downloadOptions);
+    // Directly download the PDF file
+    const link = document.createElement('a');
+    link.href = 'vvrajuResume.pdf';
+    link.download = 'vvrajuResume.pdf';
+    link.target = '_blank';
+    link.click();
 }
 
 function downloadPDF() {
-    // Open PDF-optimized version in new window for printing/saving
-    const pdfWindow = window.open('V_VISHNURAJU_Resume.html');
+    // Directly download the PDF file
+    const link = document.createElement('a');
+    link.href = 'vvrajuResume.pdf';
+    link.download = 'vvrajuResume.pdf';
+    link.target = '_blank';
+    link.click();
     closeDownloadModal();
 }
 
-function downloadWord() {
-    // Create Word document content
-    const wordContent = generateWordContent();
-    const blob = new Blob([wordContent], { type: 'application/msword' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'V_VISHNURAJU_Resume.doc';
-    link.click();
-    URL.revokeObjectURL(url);
-    closeDownloadModal();
-}
+
 
 function viewOnline() {
     window.open('resume.html', '_blank');
@@ -188,10 +163,10 @@ body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
 • User Experience Design • Problem Solving & Debugging • Team Collaboration</p>
 
 <div class="section-title">ACHIEVEMENTS</div>
-<p>• 25+ Projects Completed • AI Knowledge • Multitasking • 15+ Technologies Mastered</p>
+<p>• 30+ Projects Completed • 15+ Technologies Used • AI & Full-Stack Development • Strong Problem Solving</p>
 
 <hr style="margin-top: 30px;">
-<p style="text-align: center; font-size: 8pt; color: #666;">© 2024 V VISHNURAJU | All Rights Reserved</p>
+<p style="text-align: center; font-size: 8pt; color: #666;">© 2026 V VISHNURAJU | All Rights Reserved</p>
 
 </body>
 </html>
