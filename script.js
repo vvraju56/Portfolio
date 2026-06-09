@@ -129,7 +129,7 @@ body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
 <p><strong>Backend:</strong> Node.js, Express.js, MongoDB, Python</p>
 <p><strong>Mobile & Game:</strong> React Native, Android Studio, Unity, C#</p>
 <p><strong>Languages:</strong> Java, C, C#, Python, JavaScript</p>
-<p><strong>Tools:</strong> Git, VS Code, Netlify, Power BI, MS Excel</p>
+<p><strong>Data Visualization:</strong> Power BI, MS Excel, Data Reporting</p>
 
 <div class="section-title">KEY PROJECTS</div>
 
@@ -143,10 +143,10 @@ body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
 
 <div class="project">
     <strong>E-Commerce Mobile Application</strong><br>
-    <em>Technologies: React Native, Firebase, JavaScript</em><br>
+    <em>Technologies: React Native, JavaScript</em><br>
     • Built comprehensive e-commerce solution with user authentication<br>
     • Developed shopping cart, product catalog, and secure order processing<br>
-    • Integrated Firebase for real-time database and cloud storage
+    • Integrated real-time data handling and cloud-based asset management
 </div>
 
 <div class="project">
@@ -155,6 +155,16 @@ body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
     • Designed responsive portfolio showcasing technical skills and projects<br>
     • Implemented smooth scroll animations and modern UI/UX<br>
     • Deployed with performance optimization and SEO best practices
+</div>
+
+<div class="project">
+    <strong>CodeBloc - Real-Time Code Collaboration Platform</strong><br>
+    <em>Technologies: React.js, Node.js, MongoDB, Socket.IO, Docker</em><br>
+    • Mini GitHub + VS Code in browser with real-time code collaboration<br>
+    • Live cursor tracking, team chat, version control, and code execution sandbox<br>
+    • Multi-user editing with WebSocket, auto-save, and commit history<br>
+    <a href="https://github.com/vvraju56/Code-collab-platform" target="_blank">GitHub</a> |
+    <a href="https://code-collab-m15u.onrender.com" target="_blank">Live Demo</a>
 </div>
 
 <div class="section-title">EDUCATION</div>

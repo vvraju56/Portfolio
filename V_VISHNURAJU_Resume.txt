@@ -47,7 +47,7 @@ PROGRAMMING LANGUAGES
 
 TOOLS & PLATFORMS
 • Git, VS Code
-• Netlify, Firebase
+• Netlify, Web Deployment
 • Version Control Systems
 
 ================================================================================
@@ -62,11 +62,11 @@ Technologies: Unity, React Native, C#
 • Achieved cross-platform compatibility for iOS and Android devices
 
 E-COMMERCE MOBILE APPLICATION
-Technologies: React Native, Firebase, JavaScript
+Technologies: React Native, JavaScript
 • Built comprehensive e-commerce solution with user authentication and profile 
   management
 • Developed shopping cart, product catalog, and secure order processing system
-• Integrated Firebase for real-time database and cloud storage
+• Integrated real-time data handling and cloud-based storage workflows
 
 PERSONAL PORTFOLIO WEBSITE
 Technologies: React.js, Tailwind CSS, JavaScript
