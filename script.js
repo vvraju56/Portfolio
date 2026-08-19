@@ -65,7 +65,7 @@ function downloadResume() {
 
 function downloadPDF() {
     // Open PDF-optimized version in new window for printing/saving
-    const pdfWindow = window.open('V_VISHNURAJU_Resume.html');
+    const pdfWindow = window.open('vvrajuResume.pdf');
     closeDownloadModal();
 }
 
@@ -76,7 +76,7 @@ function downloadWord() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'V_VISHNURAJU_Resume.doc';
+    link.download = 'vvrajuResume.docx';
     link.click();
     URL.revokeObjectURL(url);
     closeDownloadModal();
@@ -115,7 +115,7 @@ body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
 
 <div class="header">
     <div class="name">V VISHNURAJU</div>
-    <div class="title">Web, App & Game Developer</div>
+    <div class="title">FullStack Developer</div>
     <div class="contact">
         📧 vishnuraju922732@gail.com | 🔗 github.com/vvraju56 | 💼 linkedin.com/in/vishnuraju-v-757b9929b | 📍 India
     </div>

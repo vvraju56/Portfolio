@@ -27,7 +27,9 @@ h1,h2,h3,h4,h5,h6{color:#ffffff;font-weight:800;letter-spacing:0.2px}
 h1,h2{ text-shadow: 0 6px 18px rgba(124,92,255,0.06); }
 
 /* Hero gradient background utility (keeps existing usage) */
-.gradient-bg{background:linear-gradient(135deg,var(--accent-1),var(--accent-3) 70%)}
+.gradient-bg{
+    background: linear-gradient(135deg, #3b82f6, #000 70%);
+}
 .gradient-text{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
 /* Glass panels */
